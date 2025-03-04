@@ -6,12 +6,12 @@ grade = int(
 if (grade < 0 or grade > 100):
     print("Please enter in a valid numerical grade.")
 elif (grade >= 90):
-    print(f"The letter grade is: A")
+    print("The letter grade is: A")
 elif (grade >= 80):
-    print(f"The letter grade is: B")
+    print("The letter grade is: B")
 elif (grade >= 70):
-    print(f"The letter grade is: C")
+    print("The letter grade is: C")
 elif (grade >= 60):
-    print(f"The letter grade is: D")
+    print("The letter grade is: D")
 else:
-    print(f"The letter grade is: F")
+    print("The letter grade is: F")
