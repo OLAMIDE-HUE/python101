@@ -4,7 +4,7 @@ grade = int(
 
 # converts numerical grade to letter grade and prints the letter grade
 if (grade < 0 or grade > 100):
-    print("Please enter in a numerical grade between 1 and 100 inclusively: ")
+    print("Please enter in a valid numerical grade.")
 elif (grade >= 90):
     print(f"The letter grade is: A")
 elif (grade >= 80):
