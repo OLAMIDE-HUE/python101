@@ -6,6 +6,7 @@ print(f"These are the available seats:", end=" ")
 for seat in seats:
     print(seat, end=",")
 
+# gets the seat the user purchases and updates the listZ
 while len(seats) != 0:
     seatNum = int(input(
         "Please enter a seat , 1-20,you would like to purchase or enter \"0\" to end the purchase process: "))
@@ -22,5 +23,6 @@ while len(seats) != 0:
     else:
         print(f"Seat {seatNum} has already been purchased! Please try again!")
 
+# prints remaining seats available
 print(f"Remaining available seats are {seats}")
 print("This is the end of the program!")
