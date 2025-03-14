@@ -3,13 +3,12 @@ seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 # printing the available seats
 print(f"These are the available seats:", end=" ")
-for seat in seats:
-    print(seat, end=",")
+print(seats, end="\n")
 
 # gets the seat the user purchases and updates the listZ
 while len(seats) != 0:
     seatNum = int(input(
-        "Please enter a seat , 1-20,you would like to purchase or enter \"0\" to end the purchase process: "))
+        "Please enter a seat between 1-20 you would like to purchase or enter \"0\" to end the purchase process: "))
     if seatNum < 0 or seatNum > 20:
         print("Please enter in a number from 1-20!")
         continue
