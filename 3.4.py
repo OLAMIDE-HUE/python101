@@ -14,7 +14,7 @@ for i in range(len(days)):
 
 # prints how many steps was taken on each day and calculates total steps
 for i in range(len(days)):
-    print(f"On {days[i]}, you took {steps[i]} steps!")
+    print(f"The amound of steps you took on {days[i]} was: {steps[i]}")
     total += steps[i]
 
 # prints total and average steps
