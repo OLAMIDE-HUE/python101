@@ -10,8 +10,8 @@ def BMI_conversion(weight, height):
     return bmi
 
 # getting the user inputs
-weight_in_pounds = int(input("Enter your weight in pounds: "))
-height_in_inches = int(input("Enter your height in inches: "))
+weight_in_pounds = float(input("Enter your weight in pounds: "))
+height_in_inches = float(input("Enter your height in inches: "))
 
 # converting pounds and inches to kilograms and meters
 weight_in_kilograms = weight_in_pounds * pounds_to_kilograms
