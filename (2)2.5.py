@@ -3,6 +3,8 @@ def main():
     has_length = has_upper = has_lower = has_numeric = has_symbol = False
 
     try:
+
+        # runs if the users password does not meet any of the requirements
         while not (has_length and has_upper and has_lower and has_numeric and has_symbol):
             has_length = has_upper = has_lower = has_numeric = has_symbol = False
             password = input("Please enter a password: ")
@@ -39,10 +41,12 @@ def main():
             second_password = input(
                 "Please enter you password again to confirm: ")
 
+        # prints when the user enters an eligible password twice
         print("Success")
 
+    # catches any error from the user
     except:
-        print("An error occurred!")
+        print("An error occurred!\nPlease try again!")
 
 
 main()
