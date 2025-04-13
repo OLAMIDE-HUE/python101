@@ -50,7 +50,7 @@ def main():
         elif (operation.lower() == "division"):
             print("Result: ", divide(num1, num2))
 
-    # runs if the second number is 0
+    # runs if the second number is 0 and the operation is division
     except ZeroDivisionError:
         print("ERROR!!!\nPlease do not divide by zero")
 
