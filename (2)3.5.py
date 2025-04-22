@@ -46,39 +46,57 @@ class ProductionWorker(Employee):
         self.__hourly_pay_rate = rate
 
 
-try:
-    # creating an instance of production worker
-    p_worker = ProductionWorker()
+# defining an exception class for an invalid shift number
+class InvalidShiftNum(Exception):
+    pass
 
-    print("""Enter the following details of the Employee
---------------------------------------------""")
+# defining the main function
 
-    # storing employee details
-    p_worker.set_employee_name(input("Enter Employee Name: "))
-    p_worker.set_employee_number(int(input("Enter Employee Number: ")))
-    p_worker.set_shift_number(
-        int(input("Enter Shift Number(\"1\" for day, \"2\" for night): ")))
-    p_worker.set_hourly_rate(float(input("Enter Pay Rate: ")))
 
-    print("""-------------------------------------------------------
-Details of Employee:
--------------------------------------------------------""")
+def main():
+    try:
+        # creating an instance of production worker
+        p_worker = ProductionWorker()
 
-    # converts 1 to Day and 2 to night
-    if (p_worker.get_shift_number() == 1):
-        shift = "Day"
-    else:
-        shift = "Night"
+        print("""Enter the following details of the Employee
+    --------------------------------------------""")
 
-    print("Name:", p_worker.get_employee_name())
-    print("Employee Number:", p_worker.get_employee_number())
-    print("Shift:", p_worker.get_shift_number())
-    print("Pay Rate:", p_worker.get_hourly_rate())
+        # storing employee details
+        p_worker.set_employee_name(input("Enter Employee Name: "))
+        p_worker.set_employee_number(int(input("Enter Employee Number: ")))
+        p_worker.set_shift_number(
+            int(input("Enter Shift Number(\"1\" for day, \"2\" for night): ")))
+        if (p_worker.get_shift_number() != 1 and p_worker.get_shift_number() != 2):
+            raise InvalidShiftNum(
+                "ERROR!!!!! You did not enter \"1\" or \"2\" for your shift number!")
 
-# exception runs if the user does not enter a number when appropriate
-except ValueError:
-    print("You did not enter a number!\nPlease try again!")
+        p_worker.set_hourly_rate(float(input("Enter Pay Rate: ")))
 
-# handles any other exception that might come up
-except:
-    print("ERROR!!!\nSomething went Wrong!")
+        print("""-------------------------------------------------------
+    Details of Employee:
+    -------------------------------------------------------""")
+
+        # converts 1 to Day and 2 to night
+        if (p_worker.get_shift_number() == 1):
+            shift = "Day"
+        else:
+            shift = "Night"
+
+        print("Name:", p_worker.get_employee_name())
+        print("Employee Number:", p_worker.get_employee_number())
+        print("Shift:", p_worker.get_shift_number())
+        print("Pay Rate:", p_worker.get_hourly_rate())
+
+    # exception runs if the user does not enter a number when appropriate
+    except ValueError:
+        print("You did not enter a number!\nPlease try again!")
+
+    except InvalidShiftNum as i:
+        print(i)
+    # handles any other exception that might come up
+    except:
+        print("ERROR!!!\nSomething went Wrong!")
+
+
+# calling the main function
+main()
