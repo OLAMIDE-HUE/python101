@@ -46,10 +46,6 @@ class ProductionWorker(Employee):
         self.__hourly_pay_rate = rate
 
 
-# defining an exception class for an invalid shift number
-class InvalidShiftNum(Exception):
-    pass
-
 # defining the main function
 
 
@@ -67,7 +63,7 @@ def main():
         p_worker.set_shift_number(
             int(input("Enter Shift Number(\"1\" for day, \"2\" for night): ")))
         if (p_worker.get_shift_number() != 1 and p_worker.get_shift_number() != 2):
-            raise InvalidShiftNum(
+            raise Exception(
                 "ERROR!!!!! You did not enter \"1\" or \"2\" for your shift number!")
 
         p_worker.set_hourly_rate(float(input("Enter Pay Rate: ")))
@@ -91,7 +87,7 @@ def main():
     except ValueError:
         print("You did not enter a number!\nPlease try again!")
 
-    except InvalidShiftNum as i:
+    except Exception as i:
         print(i)
     # handles any other exception that might come up
     except:
