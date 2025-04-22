@@ -18,10 +18,10 @@ def main():
             num = input("Enter a number: ")
 
             if not num.isnumeric():
-                raise NotNumericError(num, "Not a number")
+                raise NotNumericError(num, "is not a number")
 
         except NotNumericError as n:
-            print(n, ": ", n.number)
+            print(n.number, n)
 
         else:
             done = True
