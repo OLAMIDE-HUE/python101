@@ -58,23 +58,29 @@ def check_property(obj, prop):
     return hasattr(obj, prop)
 
 
-# initializing the first and second objects with constructor
-pet1 = Pet("Conor", "Graham", 145, "Max", "Bird")
-pet2 = Pet("Isabel", "Finley", 163, "Luna", "Cat")
+# defining the main function
+def main():
+    # initializing the first and second objects with constructor
+    pet1 = Pet("Conor", "Graham", 145, "Max", "Bird")
+    pet2 = Pet("Isabel", "Finley", 163, "Luna", "Cat")
 
-# initializing third object and assigning variable through setter method
-pet3 = Pet()
-pet3.set_owner_first_name("Carlos")
-pet3.set_owner_last_name("Rosales")
-pet3.set_pet_id(345)
-pet3.set_pet_name("Coco")
+    # initializing third object and assigning variable through setter method
+    pet3 = Pet()
+    pet3.set_owner_first_name("Carlos")
+    pet3.set_owner_last_name("Rosales")
+    pet3.set_pet_id(345)
+    pet3.set_pet_name("Coco")
 
-# displaying each objects information
-pet1.display_pet_info()
-pet2.display_pet_info()
-pet3.display_pet_info()
+    # displaying each objects information
+    pet1.display_pet_info()
+    pet2.display_pet_info()
+    pet3.display_pet_info()
 
-# checking for different attributes
-print(check_property(pet1, "_Pet__pet_id"))
-print(check_property(pet2, "_Pet__pet_name"))
-print(check_property(pet3, "vet_name"))
+    # checking for different attributes
+    print(check_property(pet1, "_Pet__pet_id"))
+    print(check_property(pet2, "_Pet__pet_name"))
+    print(check_property(pet3, "vet_name"))
+
+
+# calling the main function
+main()
