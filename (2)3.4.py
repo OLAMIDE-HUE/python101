@@ -34,16 +34,22 @@ class Pet:
         print("Pet's Name:", self.name)
 
 
-# three Pet objects
-pet1 = Pet("Dog", "Bulldog", "Max")
-pet2 = Pet("Cat", "Abyssinian", "Luna")
-pet3 = Pet("Bird", "Finch", "Rex")
+# defining the main function
+def main():
+    # three Pet objects
+    pet1 = Pet("Dog", "Bulldog", "Max")
+    pet2 = Pet("Cat", "Abyssinian", "Luna")
+    pet3 = Pet("Bird", "Finch", "Rex")
 
-# printing all the details for the objects
-pet1.print_details()
-pet2.print_details()
-pet3.print_details()
+    # printing all the details for the objects
+    pet1.print_details()
+    pet2.print_details()
+    pet3.print_details()
 
-print("The breed of pet1 is " + getattr(pet1, "breed"))
-print("The class used to instantiate pet2 is ", type(pet2))
-print("The module of pet3 is " + pet3.__module__)
+    print("The breed of pet1 is " + getattr(pet1, "breed"))
+    print("The class used to instantiate pet2 is ", type(pet2))
+    print("The module of pet3 is " + pet3.__module__)
+
+
+# calling the main function
+main()
