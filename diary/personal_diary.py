@@ -11,7 +11,7 @@ def main():
     diary_entry = input("Enter your Diary Entry: ")
 
     # opening the file with append
-    diary = open("diary.txt", "a")
+    diary = open("C:\\Users\\olami\\OneDrive\\Desktop\\Python Repository\\python101\\diary\\diary.txt", "a")
 
     # writing the given information in the file
     diary.write(date + " " + time + "\n" + diary_entry + '\n\n')
