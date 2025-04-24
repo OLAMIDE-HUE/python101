@@ -8,8 +8,13 @@ def main():
         # gets the total value of the file
         total_num = 0.0
 
-        f = open('sales_totals.txt', 'rt')
+        # opening the file directory
+        f = open("C:\\Users\\olami\\OneDrive\\Desktop\\Python Repository\\python101\\(2)4.3\\sales_totals.txt", 'rt')
+
+        # reading the first line
         line = f.readline()
+
+        # runs when line is not at the end of the file
         while line != '':
 
             # incrementing the line_counter
